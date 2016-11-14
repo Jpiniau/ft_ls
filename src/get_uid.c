@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 14:14:22 by jpiniau           #+#    #+#             */
-/*   Updated: 2016/11/10 14:45:53 by jpiniau          ###   ########.fr       */
+/*   Updated: 2016/11/14 11:56:21 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,11 @@
 #include <uuid/uuid.h>
 #include "libft.h"
 
-char	*get_uid(char *in)
+char	*get_uid(struct stat filestat)
 {
-	struct stat filestat;
 	struct passwd *pwuid;
 	char	*uid;
 
-	if (stat(in, &filestat) < 0)
-		return (NULL);
 	if ((pwuid = getpwuid(filestat.st_uid)) == NULL)
 		uid = ft_itoa(filestat.st_uid);
 	else

@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_mod.c                                          :+:      :+:    :+:   */
+/*   print_ls.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 15:33:22 by jpiniau           #+#    #+#             */
-/*   Updated: 2016/11/14 12:18:40 by jpiniau          ###   ########.fr       */
+/*   Created: 2016/11/14 17:23:30 by jpiniau           #+#    #+#             */
+/*   Updated: 2016/11/14 17:33:16 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <sys/stat.h>
-#include <stddef.h>
-#include <time.h>
+#include "ls.h"
 
-int		get_mod(struct stat filestat)
+void	print_ls(t_list	*elem)
 {
-	return (filestat.st_mtime);
+	t_ls	*data;
+
+	data = (t_ls *)elem->content;
+	ft_putstr(data->name);
+	ft_putstr("    ");
 }

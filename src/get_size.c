@@ -6,7 +6,7 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:09:12 by jpiniau           #+#    #+#             */
-/*   Updated: 2016/11/10 15:22:42 by jpiniau          ###   ########.fr       */
+/*   Updated: 2016/11/14 11:55:51 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 #include <pwd.h>
 #include "libft.h"
 
-int		get_size(char *in)
+int		get_size(struct stat filestat)
 {
-	struct stat filestat;
-
-	if (stat(in, &filestat) < 0)
-		return (-1);
 	return (filestat.st_size);
 }

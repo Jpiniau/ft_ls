@@ -6,7 +6,7 @@
 #    By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/09 15:51:57 by jpiniau           #+#    #+#              #
-#    Updated: 2016/11/10 16:21:49 by jpiniau          ###   ########.fr        #
+#    Updated: 2016/11/14 17:23:10 by jpiniau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = ft_ls
@@ -22,7 +22,11 @@ SRC_NAME =	main.c\
 			get_gid.c\
 			get_size.c\
 			get_mod.c\
-			get_link.c
+			get_link.c\
+			recursive.c\
+			set_info.c\
+			print_ls.c\
+			del_ls.c
 
 SRC = $(addprefix $(SRC_PATH), $(SRC_NAME))
 

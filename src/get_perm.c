@@ -6,20 +6,17 @@
 /*   By: jpiniau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 14:45:37 by jpiniau           #+#    #+#             */
-/*   Updated: 2016/11/10 14:45:38 by jpiniau          ###   ########.fr       */
+/*   Updated: 2016/11/14 11:55:20 by jpiniau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <sys/stat.h>
 
-char	*get_perm(char *in)
+char	*get_perm(struct stat filestat)
 {
 	char	*perm;
-	struct stat filestat;
 
-	if (stat(in, &filestat) < 0)
-		return (NULL);
 	perm = ft_strdup("---------");
 	perm[0] = filestat.st_mode & S_IRUSR ? 'r' : '-';
 	perm[1] = filestat.st_mode & S_IWUSR ? 'w' : '-';
