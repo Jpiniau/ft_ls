@@ -47,7 +47,7 @@ void	recursive(t_list *list)
 				}
 			}
 			ft_lstiter(rlist, print_ls);
-			ft_lstdel(&rlist, del_ls);
+			//ft_lstdel(&rlist, del_ls);
 			rlist = NULL;
 			ft_putendl("");
 		}

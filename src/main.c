@@ -44,11 +44,13 @@ int		main(int ac, char **av)
 		while ((fichier = readdir(rep)) != NULL)
 		{
 			if (fichier->d_name[0] != '.')
+			{
 				if ((info = set_info(fichier->d_name, NULL)) != NULL)
 				{
 					new = ft_lstnew(info, sizeof(t_ls));
 					ft_lstaddback(&list, new);
 				}
+			}
 		}
 		ft_lstiter(list, print_ls);
 		if (r == 1)
@@ -62,7 +64,7 @@ int		main(int ac, char **av)
 	{
 		i = 0;
 		while (++i < ac)
-			info = set_info(av[i]);
+			info = set_info(av[i], NULL);
 	}
 	return (0);
 }

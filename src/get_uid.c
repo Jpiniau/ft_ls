@@ -13,7 +13,8 @@
 #include <stddef.h>
 #include <sys/stat.h>
 #include <pwd.h>
-#include <uuid/uuid.h>
+//#include <uuid/uuid.h>
+#include <sys/types.h>
 #include "libft.h"
 
 char	*get_uid(struct stat filestat)

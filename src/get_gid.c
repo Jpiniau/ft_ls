@@ -14,7 +14,8 @@
 #include <sys/stat.h>
 #include <pwd.h>
 #include <grp.h>
-#include <uuid/uuid.h>
+//#include <uuid/uuid.h>
+#include <sys/types.h>
 #include "libft.h"
 
 char	*get_gid(struct stat filestat)

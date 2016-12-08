@@ -22,6 +22,7 @@
 
 void	ft_lstdel_str(void *content, size_t size)
 {
+	(void)size;
 	if (content != NULL)
 		free(content);
 	content = NULL;

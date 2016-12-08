@@ -31,12 +31,9 @@ t_ls	*set_info(char *file, t_ls *parent)
 				return (NULL);
 		}
 		else
-		{
-			ft_putendl("TEST3");
 			return (NULL);
-		}
 		info->name = ft_strdup(file);
-		if (parent == NULL)
+		if (!parent)
 		//Seg fault ==NULL pas bon
 			info->path = ft_strdup("./");
 		else
